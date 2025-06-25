@@ -1,0 +1,36 @@
+import time
+wrongpassword = True
+while wrongpassword == True:
+    password = input("Password: ")
+    if password == "1234":
+        wrongpassword == False
+        print('Welcome to the text adventure.')
+        mc = input("What is your main characters name? ")
+        print(mc + "'s favorite video game is ____.")
+        favoritevideogame = input("Fill in the blank with a competitve multiplayer game. ")
+        print(f"One day, {mc} enters a(n) {favoritevideogame} tournament named ____.")
+        tournamentname = input("Fill in the bank: ")
+        print(mc + " feels very ___ about his chances on winning.")
+        emotion = input("Fill in the blank: ")
+        print(f"When the first round starts {mc} is so {emotion} that he gets in his own head and loses the first round.")
+        print(f"Fortunately, {tournamentname} is a double elimination tournament. This means that {mc} will get a chance. ")
+        print(f"This time {mc} is determined to win.")
+        print(mc + " plans to practice ____ a lot more.")
+        practiceskill = input(f"Fill in the blank with a skill in {favoritevideogame} that needs practice. ")
+        print(f"After a long night of practicing {practiceskill}, {mc} is confident has a much higher chance of winning.")
+        print(f"{mc} is going to play against ____. ")
+        rival = input("Enter your rivals name: ")
+        print(f"At the very beginning of the round, {rival} is winning.")
+        print(f"This reminds {mc} of the brutal loss they faced the previous day.")
+        print(f"{mc} feels very nervous about his chances at winning.")
+        print(f"Will {mc} win?")
+        print(f"{mc}'s vision starts to blur and his brain starts to fog.")
+        print("Was it all for nothing?")
+        time.sleep(10)
+        print(f"{mc}'s eyes start to open.")
+        print(f"Finally, {mc} focused {practiceskill} and gets in the lead.")
+        print(f"In a euphoric state, {mc} beats his rival, {rival}!")
+        print('THE END')
+        break
+    else:
+        print('Incorrect password!')
