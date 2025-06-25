@@ -1,0 +1,17 @@
+#collatz Conjeccture
+startingnumber = input("Enter the number you want to start with: ")
+num = int(startingnumber)
+collatzseries = []
+while num != 4:
+    collatzseries.append(num)
+    if num % 2 == 0:
+        num = num/2
+    elif num % 2 == 1:
+        num = (3 * num) + 1
+    else:
+        print(" Please enter a natural number. ")
+collatzseries.append(4)
+collatzseries.append(2)
+collatzseries.append(1)
+print(collatzseries)
+listlength = len(collatzseries)
