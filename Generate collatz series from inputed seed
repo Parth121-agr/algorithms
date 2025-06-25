@@ -1,17 +1,32 @@
-#collatz Conjeccture
-startingnumber = input("Enter the number you want to start with: ")
-num = int(startingnumber)
-collatzseries = []
-while num != 4:
-    collatzseries.append(num)
-    if num % 2 == 0:
-        num = num/2
-    elif num % 2 == 1:
-        num = (3 * num) + 1
+#collatz Conjecture
+loop = True
+while loop == True:
+    loop = False
+    startingnumber = input("Enter the number you want to start with: ")
+    num = int(startingnumber)
+    collatzseries = []
+    while num != 4 and num != 2 and num != 1 and num != 0:
+        collatzseries.append(num)
+        if num < 0:
+            print(" Please enter a natural number. ")
+        else:
+            if num % 2 == 0:
+                num = num/2
+            elif num % 2 == 1:
+                num = (3 * num) + 1
+            else:
+                print(" Please enter a natural number. ")
+    if num == 2:
+        collatzseries.append(2)
+        collatzseries.append(1)
+    elif num == 1:
+        collatzseries.append(1)
+    elif num == 4:
+        collatzseries.append(4)
+        collatzseries.append(2)
+        collatzseries.append(1)
     else:
-        print(" Please enter a natural number. ")
-collatzseries.append(4)
-collatzseries.append(2)
-collatzseries.append(1)
-print(collatzseries)
-listlength = len(collatzseries)
+        print('Zero is not a natural number.')
+        loop = True
+    print(collatzseries)
+    listlength = len(collatzseries)
