@@ -1,0 +1,26 @@
+biggestseed = 0
+listlength = 0
+oldlength = 0
+#collatzseries = []
+
+for startingnumber in range(5, 1000001 ):
+    collatzseries = []
+    num = int(startingnumber)
+    while num != 4:
+        collatzseries.append(num)
+        if num % 2 == 0:
+            num = num/2
+        elif num % 2 == 1:
+            num = (3*num)+1
+        
+    if startingnumber % 10000 == 0:
+        print(f"The step that we are currently at is {startingnumber} and the largest so far is {oldlength}.")
+    collatzseries.append(4)
+    collatzseries.append(2)
+    collatzseries.append(1)
+    listlength = len(collatzseries)
+    if listlength > oldlength:
+        oldlength = listlength
+        biggestseed = startingnumber
+
+print(f'The longest chain created by the Collatz Conjecture from any natural number from one to one million is {biggestseed} at a length of {oldlength}.')
